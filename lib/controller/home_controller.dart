@@ -14,7 +14,7 @@ class HomeController extends GetxController {
   }
 
   reset() {
-value=0;
-update();
+    value = 0;
+    update();
   }
 }
