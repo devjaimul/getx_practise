@@ -1,25 +1,12 @@
 import 'package:get/get.dart';
 
-class Controller extends GetxController {
-  RxDouble opacity = .4.obs;
-  RxBool notification = false.obs;
+class CounterController extends GetxController{
+  RxInt count=0.obs;
 
-  RxList <String> fruit=['apple','banana','mango','pineapple'].obs;
-  RxList fruitList=[].obs;
-
-  example(double value) {
-    opacity.value = value;
+  void increment(){
+    count+=2;
   }
-
-  example2(bool value) {
-    notification.value = value;
-  }
-
-  addFruitList(String value){
-    fruitList.add(value);
-  }
-
-  removeFruitList(String value){
-    fruitList.remove(value);
+  void decrement(){
+    count-=2;
   }
 }
